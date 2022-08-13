@@ -119,4 +119,6 @@ def guessbase(minaddr,maxaddr,step=0x100,output=10,arch=1):
     hits.reverse()
     print("if many baseaddrs printed , maybe more than one firmware")
     for num,b  in hits[:output]:
+        if num==0:
+            break
         print(f"possible baseaddr:0x{b:x} hits:{num:d}")
