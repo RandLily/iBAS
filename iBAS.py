@@ -107,7 +107,7 @@ def guessbase(minaddr,maxaddr,step=0x100,output=10,arch=1):
             disass_address_list.append(offset)
     print(f"total functions found: {len(disass_address_list)}")
     
-    print(f"scanning binary for step>={step:x}...")
+    print(f"scanning binary for step={step:x}...")
     hits=[]
     for guess_addr in range(minaddr,maxaddr,step):
         flag = 0
